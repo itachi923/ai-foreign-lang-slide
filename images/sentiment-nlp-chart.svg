@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c2340" />
+      <stop offset="100%" stop-color="#07162c" />
+    </linearGradient>
+    <linearGradient id="barGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+    <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.4" />
+      <stop offset="100%" stop-color="#1d4ed8" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="1600" height="1000" fill="url(#bgGrad)" rx="8" />
+  
+  <!-- Architectural Grid / Border -->
+  <rect x="50" y="50" width="1500" height="900" fill="none" stroke="#2563eb" stroke-width="1" stroke-opacity="0.3" rx="4" />
+  
+  <!-- Section Headers -->
+  <text x="80" y="110" font-family="'IBM Plex Mono', monospace" font-size="16" letter-spacing="4" fill="#93c5fd" font-weight="600">PLATE 06 · NLP 文本探勘與情感極性解析</text>
+  <text x="1520" y="110" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="14" letter-spacing="3" fill="#60a5fa">N=136 期末回顧報告</text>
+
+  <!-- Left Half: Sentiment Analysis Metric (+0.778) -->
+  <g transform="translate(100, 180)">
+    <!-- Subtitle -->
+    <text x="0" y="40" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="600" fill="#f8fafc">1. 綜合情感極性分數 (Sentiment Polarities)</text>
+    <text x="0" y="75" font-family="'IBM Plex Mono', monospace" font-size="15" fill="#94a3b8">範圍 -1.0 (消極) 至 +1.0 (積極) · 創歷年專案新高</text>
+    
+    <!-- Big Gauge Score Box -->
+    <rect x="0" y="110" width="580" height="200" fill="#0f2b48" stroke="#1e40af" stroke-width="1.5" rx="6" />
+    <text x="40" y="210" font-family="'Playfair Display', Georgia, serif" font-size="88" font-weight="700" fill="#60a5fa">+0.778</text>
+    <text x="350" y="170" font-family="'Noto Sans SC', sans-serif" font-size="20" font-weight="600" fill="#38bdf8">極度肯定</text>
+    <text x="350" y="200" font-family="'Noto Sans SC', sans-serif" font-size="14" fill="#94a3b8">Positive Sentiment</text>
+    <text x="350" y="235" font-family="'Noto Sans SC', sans-serif" font-size="13" fill="#64748b">滿意度高達 88.9%</text>
+
+    <!-- Spectrum Bar Indicator -->
+    <g transform="translate(0, 350)">
+      <text x="0" y="-15" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#64748b">-1.0 (Negative)</text>
+      <text x="290" y="-15" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#64748b">0.00 (Neutral)</text>
+      <text x="580" y="-15" text-anchor="end" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#64748b">+1.0 (Positive)</text>
+      
+      <!-- Track -->
+      <rect x="0" y="0" width="580" height="12" fill="#1e293b" rx="6" />
+      <rect x="290" y="0" width="225" height="12" fill="url(#barGrad)" rx="6" />
+      
+      <!-- Needle Point for 0.778 (Position: 290 + 290*0.778 = 515.6) -->
+      <circle cx="516" cy="6" r="14" fill="#38bdf8" stroke="#ffffff" stroke-width="3" />
+      <line x1="516" y1="26" x2="516" y2="55" stroke="#38bdf8" stroke-width="2" />
+      <text x="516" y="80" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="16" font-weight="700" fill="#38bdf8">0.778</text>
+    </g>
+
+    <!-- Key Takeaway Text -->
+    <g transform="translate(0, 480)">
+      <rect x="0" y="0" width="580" height="170" fill="#08182b" stroke="#1d4ed8" stroke-width="1" stroke-dasharray="4 4" rx="4" />
+      <text x="25" y="45" font-family="'Noto Sans SC', sans-serif" font-size="16" font-weight="600" fill="#93c5fd">學生真實心聲摘錄：</text>
+      <text x="25" y="80" font-family="'Noto Sans SC', sans-serif" font-size="15" fill="#cbd5e1">「本以為文科跟 AI 毫無關聯，組隊後發現能做出實用 APP！」</text>
+      <text x="25" y="115" font-family="'Noto Sans SC', sans-serif" font-size="15" fill="#cbd5e1">「打破了對寫程式的恐懼，真正體驗到跨域協作的成就感。」</text>
+      <text x="25" y="150" font-family="'IBM Plex Mono', monospace" font-size="13" fill="#64748b">— 期末報告《回顧與反省》質化共識</text>
+    </g>
+  </g>
+
+  <!-- Right Half: Co-occurrence Network Cluster Diagram (共現網絡圖) -->
+  <g transform="translate(780, 180)">
+    <text x="0" y="40" font-family="'Noto Sans SC', sans-serif" font-size="22" font-weight="600" fill="#f8fafc">2. 關鍵詞共線網絡聚類 (Cluster Network)</text>
+    <text x="0" y="75" font-family="'IBM Plex Mono', monospace" font-size="15" fill="#94a3b8">高頻詞交互聯結 · KH Coder 自然語言分析</text>
+
+    <!-- Network Area Box -->
+    <rect x="0" y="110" width="670" height="570" fill="#08172c" stroke="#1e3a8a" stroke-width="1" rx="6" />
+
+    <!-- Network Center Core (AI) -->
+    <g transform="translate(335, 395)">
+      <!-- Background Glow -->
+      <circle cx="0" cy="0" r="140" fill="url(#nodeGlow)" />
+
+      <!-- Connection Lines -->
+      <line x1="0" y1="0" x2="-170" y2="-120" stroke="#3b82f6" stroke-width="3" stroke-opacity="0.8" />
+      <line x1="0" y1="0" x2="-190" y2="90" stroke="#3b82f6" stroke-width="2.5" stroke-opacity="0.8" />
+      <line x1="0" y1="0" x2="-20" y2="-190" stroke="#3b82f6" stroke-width="3.5" stroke-opacity="0.9" />
+      <line x1="0" y1="0" x2="160" y2="-120" stroke="#3b82f6" stroke-width="3" stroke-opacity="0.8" />
+      <line x1="0" y1="0" x2="190" y2="80" stroke="#3b82f6" stroke-width="2.5" stroke-opacity="0.7" />
+      <line x1="0" y1="0" x2="0" y2="180" stroke="#3b82f6" stroke-width="3" stroke-opacity="0.8" />
+
+      <!-- Sub-connections between satellite nodes -->
+      <line x1="-170" y1="-120" x2="-20" y2="-190" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+      <line x1="-20" y1="-190" x2="160" y2="-120" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+      <line x1="-190" y1="90" x2="0" y2="180" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+      <line x1="190" y1="80" x2="0" y2="180" stroke="#60a5fa" stroke-width="1.5" stroke-opacity="0.5" stroke-dasharray="3 3" />
+
+      <!-- Satellite Node 1: 我們 (Us) -->
+      <circle cx="-20" cy="-190" r="50" fill="#1e40af" stroke="#93c5fd" stroke-width="2" />
+      <text x="-20" y="-183" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="18" font-weight="700" fill="#ffffff">我們</text>
+      <text x="-20" y="-163" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#bfdbfe">TF:642</text>
+
+      <!-- Satellite Node 2: 能 / 可以 (Capability) -->
+      <circle cx="-170" cy="-120" r="44" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
+      <text x="-170" y="-115" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">能 / 可以</text>
+      <text x="-170" y="-97" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#bfdbfe">TF:469</text>
+
+      <!-- Satellite Node 3: 課程 (Course) -->
+      <circle cx="160" cy="-120" r="46" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
+      <text x="160" y="-115" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">課程</text>
+      <text x="160" y="-97" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#bfdbfe">TF:267</text>
+
+      <!-- Satellite Node 4: 老師 (Mentors) -->
+      <circle cx="190" cy="80" r="42" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
+      <text x="190" y="85" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="16" font-weight="700" fill="#ffffff">老師</text>
+      <text x="190" y="103" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#bfdbfe">TF:235</text>
+
+      <!-- Satellite Node 5: 未來 (Future) -->
+      <circle cx="0" cy="180" r="45" fill="#1d4ed8" stroke="#93c5fd" stroke-width="2" />
+      <text x="0" y="185" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="17" font-weight="700" fill="#ffffff">未來</text>
+      <text x="0" y="203" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#bfdbfe">TF:229</text>
+
+      <!-- Satellite Node 6: 跨域APP (APP) -->
+      <circle cx="-190" cy="90" r="40" fill="#1e3a8a" stroke="#60a5fa" stroke-width="2" />
+      <text x="-190" y="95" text-anchor="middle" font-family="'Noto Sans SC', sans-serif" font-size="15" font-weight="700" fill="#ffffff">APP實作</text>
+      <text x="-190" y="113" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="12" fill="#bfdbfe">TF:167</text>
+
+      <!-- Central Node: AI -->
+      <circle cx="0" cy="0" r="75" fill="#2563eb" stroke="#ffffff" stroke-width="3.5" />
+      <text x="0" y="10" text-anchor="middle" font-family="'Playfair Display', Georgia, serif" font-size="38" font-weight="800" fill="#ffffff">AI</text>
+      <text x="0" y="34" text-anchor="middle" font-family="'IBM Plex Mono', monospace" font-size="14" fill="#e0e7ff">TF: 1,232</text>
+    </g>
+  </g>
+</svg>
